@@ -1,0 +1,628 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body,.awards,.web{
+    background-image: url(../images/wooden-boards-with-lake-with-boat.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.creative ,.welcome,.featured,.offer,.choose,.awards,.pricing,.web,.team,.news,.last{
+    width: 100%;
+    height: 100vh;
+}
+/*Header*/
+.header{
+    width: 100%;
+    height: 55px;
+    background-color: rgb(49, 8, 49);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left:0;
+    opacity: 0.7;
+}  
+.header-list{
+    list-style: none;
+    float:right;
+    margin-right: 110px;
+    margin-top: 15px;
+}
+.header-list li {
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 17px;
+    text-align: center;  
+}
+.header-list li:hover{
+    color: white;  
+}
+.header-list li a{
+    text-decoration: none;
+    position: relative;
+    color: white;
+}
+
+.header-list li a:hover{
+    transition: 2s;
+}
+.header-list li a:hover , .header-list-home{
+    text-decoration: 3px underline blue;
+}
+.header-logo{
+    height:55px;
+    width: 100px;
+    margin-left: 150px;
+    float:left;
+}
+/* End Header */
+/* Start Creative Section */
+.creative{
+    position: relative;
+    background-image: url(../images/hawaii-beach-landscape-with-ocean-view.jpg);
+    background-size: cover;
+}
+.creative-overlay,.awards-overlay,.web-overlay{
+    position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5)
+}
+.creative-parent{
+    position: absolute;
+    width: 60%;
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.creative-title{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.creative-title,.creative-paragraph{
+    color: white;
+}
+.creative button{
+    width: 150px;
+    height: 45px;
+    font-size: large;
+    text-transform: capitalize;
+    border-radius: 7px;
+    margin-left: 5px;
+}
+.creative button:hover{
+    opacity: 0.6;
+}
+.creative-parent button a{
+    text-decoration: none;
+    color: black;
+}
+.creative-btn2 {
+    background-color: blue;
+}
+#btn2{
+    color: white; 
+}
+/* End Creative Section */
+/* Start Welcome Section & some properties for Featured Section & some prperties for Offer Section 
+ & some properties for pricing section & some properties for team section*/
+.welcome,.featured,.offer,.team,.news{
+    position: relative;
+    background-color: white;
+    
+}
+.welcome-title,.featured-title,.offer-title,.choose-title,.pricing-title,.team-title,.news-title{
+    padding-top: 20vh;
+    font-size: 35px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.welcome-line,.featured-line,.offer-line,.choose-line,.pricing-line,.team-line,.news-line{
+    height: 4px;
+    width: 45px;
+    margin:6px 0px 0px 50vw;
+    background-color: rgb(102, 41, 160);
+    transform: translate(-50%,-50%);
+}
+.welcome-parent,.featured-parent,.offer-parent,.team-parent,.news-parent{
+    position: absolute;
+    width: 90%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-30%);
+}
+.welcome-container,.offer-container,.pricing-container,.team-container,.news-container{
+    position: relative;
+    float: left;
+    margin-left: 7%;
+    height: 200px;
+    width: 300px;
+    border: 1px solid black;
+    text-align: center;
+}
+.welcome-container:hover h2,.offer-container:hover h2{
+    color: white;
+}
+.welcome-container:after,.offer-container::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top:0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+}
+.welcome-container:hover::after,.offer-container:hover::after{
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    transition: 1s;
+    z-index: -1;
+}
+.welcome-icons,.offer-icons,.choose-left-section i{
+    padding-top: 25px;
+    font-size: xx-large;
+    color: rgb(102, 34, 165);
+}
+.welcome-paragraph ,.offer-container p{
+    font-size: larger;
+    color: rgb(168, 167, 167);
+}
+.welcome-a{
+    text-decoration: none;
+    font-size: large;
+    color: rgb(102, 34, 165);
+}
+/* End Welcome Section */
+/* Start Featured Section */
+.featured,.pricing{
+    background-color: oldlace;
+    height: 1000px;   
+}
+.featured-container{
+    position: relative;
+    height: 300px;
+    width: 250px;
+    float: left;
+    margin-left: 9%;
+    margin-top: 4%;
+}
+.featured-img ,.featured-img img{
+    height: 280px;
+    width: 230px;
+    margin-left:5px ;
+    margin-top: 5px;
+    position: absolute;
+}
+.featured-item{
+    height: 300px;
+    width: 250px;
+    position: absolute;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+
+}
+.featured-info{
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.featured-info p{
+    color: rgb(150, 85, 211);
+    text-align: center;
+    font-size: large;
+    text-transform: uppercase;
+}
+.featured-info h2{
+    font-size: larger;
+    color: white;
+}
+.featured-info a{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(150, 85, 211);
+}
+.featured-info a i{
+    line-height: 40px;
+    color: rgb(49, 8, 49);
+}
+.featured-container:hover .featured-item{
+    visibility: visible;
+}
+.featured-parent,.offer-parent{
+    margin-top: -70px ;
+}
+/* End Featured Section */
+/* Start Offer Section */
+.offer{
+    height: 750px;
+}
+.offer-container{
+    position: relative;
+    margin-top: 4%;
+    padding-left: 12px;
+    text-align: left;
+}
+.offer-min-container{
+    position: absolute;
+    display: inline;
+    width: 200px;
+    margin-top: 28px;
+    margin-left: 18px;
+}
+/* End Offer Section */
+/* Start Choose Section */
+.choose{
+    background-color: oldlace;
+}
+.choose-parent{
+    position: relative;
+    margin: auto;
+}
+.choose-left-section,.choose-right-section{
+    float: left;
+    width: 40%;
+}
+.choose-left-section{
+    text-align: left;
+    padding-left: 10%;
+}
+.choose-line{
+    width: 50px;
+    margin: 6px 0px 0px 35px;
+}
+.choose-paragraph{
+    width: 500px;
+    height: 50px;
+    opacity: 0.6;
+    font-size: 20px;
+}
+.choose-title{
+    text-align: left;
+}
+.choose-left-section span{
+    font-size: larger;
+    opacity: 0.6;
+}
+.choose-img{
+    width: 400px;
+    height: 420px;
+    background-image: url(../images/wooden-board-empty-table-front-blue-sea-sky-background-perspective-wood-floor-sea-sky-can-be-used-display-montage-your-products-beach-summer-concepts\ \(1\).jpg);
+    background-size: cover;
+    margin-left: 200px;
+    margin-top: 90px;
+}
+.choose-dots{
+    margin-left: 380px;   
+}
+.choose-dots i{
+    font-size: smaller;
+}
+.choose-right-section .choose-dots i:hover,.dot1{
+    color: rgb(102, 34, 165);
+}
+/* End Choose Section */
+/* Start Awards Section */
+.awards{
+    position: relative;
+    height: 50vh;
+    background-image: url(../images/snowy-mountain-peak-starry-galaxy-majesty-generative-ai.jpg);
+}
+.awards-parent,.web-parent{
+    position: absolute;
+    width: 90%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.awards-container,.web-container{
+    width: 25%;
+    text-align: center;
+    float: left;
+    color: white;
+}
+.awards-container i{
+    color: rgb(150, 85, 211);
+    font-size: xx-large;
+}
+.awards-container h2{
+    font-size: xx-large;
+}
+.awards-container p{
+    font-size: larger;
+}
+/* End Awards Section */
+/* Start Pricing Section */
+.pricing{
+    height: 800px;
+}
+.pricing-container{
+    position: relative;
+    height: 400px;
+    padding-top:25px ;
+    font-size: larger;
+    line-height: 30px;
+}
+.pricing-parent{
+    margin-left: 4%;
+    margin-top: 100px;
+}
+.pricing-circle{
+    padding-top: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid  rgb(102, 34, 165);
+    margin: auto;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.pricing-circle h2{
+    font-size: 50px;
+}
+.pricing-container-title{
+    text-transform: uppercase;
+    font-size: large;
+     opacity: 0.7; 
+}
+.pricing-container button{
+    border: 2px solid  rgb(102, 34, 165);
+    width: 150px;
+    height: 40px;
+    font-size: large;
+    background-color: white;
+}
+.pricing-paragraph{
+color: gray;}
+.pricing-container:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top:0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+}
+.pricing-container:hover::after{
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    transition: 1s;
+}
+.pricing-container:hover .pricing-container-title,.pricing-container:hover h2,.pricing-container:hover .pricing-circle p{
+     color: blue;
+}
+.pricing-container:hover h2,.pricing-container:hover .pricing-circle p{
+    transition: 2s;
+}
+/* End Pricing Section */
+/* Start Web Section */
+.web{
+    position: relative;
+    height: 50vh;
+    background-image: url(../images/autumn-leaf-falling-revealing-intricate-leaf-vein-generated-by-ai.jpg);
+}
+.web-overlay{
+    position: relative;
+}
+.web-parent{
+    width: 80%;
+    height: 400px;
+}
+.web-container{
+    overflow: auto;
+    width: 43%;
+    float: left;
+    margin-top: 120px;
+    margin-left: 7%;
+}
+.web-img1,.web-img2{
+    background-image: url(../images/cuteanimated_607.jpg);
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    float: left;
+}
+.web-img2{
+    background-image:url(../images/18ea9f24-7231-47a5-82e8-c76ac7d1bc2b.jpg) ;
+}
+.web-info{
+    float: left;
+    width: 300px;
+    height: 100px;
+    text-align: left;
+    padding-top: 25px;
+    padding-left:30px;
+}
+.web-paragraph{
+    width: 400px;
+    text-transform: capitalize;
+}
+.web-info span{
+    color: rgb(150, 85, 211);
+    font-size: large;
+}
+/* End Web Section */
+/* Start Team Section*/
+.team-container{
+    position: relative;
+    height: 300px;
+    background-color: oldlace;
+    border: none;
+    padding-top: 20px;
+}
+.team-title{
+    padding-top: 15vh;
+}
+.team-img{
+    position: relative;
+    width: 85%;
+    margin: auto;
+}
+.team-img img{
+    width: 100%;
+}
+.team-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0 ,0.6);
+    visibility: hidden;
+}
+.team-container:hover .team-overlay{
+    visibility: visible;
+}
+.team-overlay a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(150, 85, 211);
+    color: white;
+    margin-left: auto;
+}
+.team-overlay a i{
+    line-height: 40px;
+}
+.team-info-title{
+    padding: 11px 0px;
+    text-transform: capitalize;
+}
+.team-info-p{
+    color: gray;
+    text-transform: uppercase;
+}
+.team-container:hover .team-info-title{
+    color: rgb(205, 119, 226);
+}
+.team-container:hover .team-info-p{
+    color: blue;
+}
+.team-container:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top:0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+}
+.team-container:hover::after{
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    transition: 1s;
+}
+/* End Team Section */
+/* Start News Section */
+.news-title{
+    padding-top: 8vh;
+}
+.news-container{
+    height: 400px;
+    background-color: white;
+    border: none;
+}
+.news-parent{
+    height: 420px;
+    background-color: oldlace;
+    margin-top: -20px;
+}
+.news-container:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top:0;
+    left: 0;
+    background-color: rgb(49, 8, 49);
+    opacity: 0;
+}
+.news-container:hover::after{
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    transition: 1s;
+}
+.news-icon{
+    text-transform: capitalize;
+}
+.news-icon i{
+    color:rgb(150, 85, 211) ;
+}
+.news-info{
+    margin-top: 10px;
+    text-align: left;
+}
+.news-info h2{
+    text-transform: capitalize;
+}
+.news-info p{
+    color: gray;
+}
+.news-info a{
+    font-size: larger;
+    text-transform: capitalize;
+}
+/* End News Section  */
+/* Start Last Section */
+.last{
+    height: 50%;
+    position: relative;
+}
+.last-parent{
+    width: 35%;
+    margin: auto;
+}
+.last-container{
+    text-align: center;
+    padding-top: 60px;
+}
+.last-img{
+    height: 100px;
+    width: 130px;
+    background-color: rgb(49, 8, 49);
+    margin: auto;
+}
+.last-img img{
+    height: 100%;
+    width: 100%;
+}
+.last-icon{
+    margin-top: 20px;
+}
+.last-icon a{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: rgb(150, 85, 211);
+}
+.last-icon a i{
+    font-size: xx-large;
+    /* line-height: 40px; */
+    color: white;
+}
+.last-icon a:hover{
+    background-color: rgb(49, 8, 49);
+}
+.last-info-p{
+    text-transform: uppercase;
+    color: rgb(163, 161, 163);
+}
+/* End Last Section  */
+
+
+
